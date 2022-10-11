@@ -1,0 +1,9 @@
+{
+  "title": "Hello world!",
+  "msg1": "Visit the ",
+  "msg2": "Svelte tutorial",
+  "msg3": " to learn how to build Svelte apps.",
+  "about": {
+    "title": "About"
+  }
+}

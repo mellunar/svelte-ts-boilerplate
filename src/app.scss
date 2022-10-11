@@ -1,0 +1,45 @@
+h1 {
+  color: #ff3e00;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+main {
+  text-align: center;
+  padding: 1em;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    font-size: 18px;
+    padding: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #ff3e00;
+}
+
+.options {
+  margin-top: 1rem;
+}
+
+.radio {
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  main {
+    max-width: none;
+  }
+}
