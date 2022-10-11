@@ -32,6 +32,11 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
+    "@ngneat/elf": "^2.1.0",
+    "@ngneat/elf-entities": "^4.4.2",
+    "@ngneat/elf-persist-state": "^1.1.6",
+    "axios": "^1.1.2",
+    "rxjs": "^7.5.7",
     "svelte-i18n": "^3.4.0"
   }
 }
