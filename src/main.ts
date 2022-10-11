@@ -1,5 +1,6 @@
 import App from './App.svelte';
 import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n';
+import { metadataRepository } from './core/state/metadata/metadata.repository';
 
 import en from './locales/en.json';
 import pt from './locales/pt.json';
@@ -7,11 +8,11 @@ import pt from './locales/pt.json';
 addMessages('en', en);
 addMessages('pt', pt);
 
-let storageLocale = localStorage.getItem('language');
+let storedLocale = metadataRepository.getLang();
 
 init({
   fallbackLocale: 'en',
-  initialLocale: storageLocale ? storageLocale : getLocaleFromNavigator(),
+  initialLocale: storedLocale ? storedLocale : getLocaleFromNavigator(),
 });
 
 const app = new App({

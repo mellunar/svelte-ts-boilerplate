@@ -5,5 +5,7 @@
   "msg3": " to learn how to build Svelte apps.",
   "about": {
     "title": "About"
-  }
+  },
+  "users": "Users",
+  "loading": "Loading"
 }

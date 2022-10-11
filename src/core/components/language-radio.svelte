@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { locale } from 'svelte-i18n';
+  import { metadataRepository } from '../state/metadata/metadata.repository';
 
   export let iso;
 
@@ -13,7 +14,7 @@
 
   function setLocale() {
     locale.set(iso);
-    localStorage.setItem('language', iso);
+    metadataRepository.setLang(iso);
   }
 </script>
 

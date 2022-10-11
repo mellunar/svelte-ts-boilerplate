@@ -1,6 +1,7 @@
 <script lang="ts">
   import { t } from 'svelte-i18n';
-  import LanguageRadio from '../components/language-radio.svelte';
+  import LanguageRadio from '~/core/components/language-radio.svelte';
+  import Example from '~/modules/example/components/example.svelte';
 </script>
 
 <main>
@@ -12,4 +13,5 @@
     <LanguageRadio iso="en" />
     <LanguageRadio iso="pt" class="radio" />
   </div>
+  <Example />
 </main>
