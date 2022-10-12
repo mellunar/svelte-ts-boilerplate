@@ -9,7 +9,7 @@ const initialState = {
   lang: null,
 };
 
-const store = createStore({ name: 'session' }, withProps<Metadata>(initialState));
+const store = createStore({ name: 'metadata' }, withProps<Metadata>(initialState));
 
 export let persist = persistState(store, {
   key: 'metadata',

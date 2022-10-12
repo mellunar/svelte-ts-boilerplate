@@ -3,7 +3,7 @@ import { selectAllEntities, upsertEntities, withEntities } from '@ngneat/elf-ent
 import { localStorageStrategy, persistState } from '@ngneat/elf-persist-state';
 import type { User } from './example.interface';
 
-const store = createStore({ name: 'session' }, withEntities<User>());
+const store = createStore({ name: 'example' }, withEntities<User>());
 
 class ExampleRepository {
   users$ = store.pipe(selectAllEntities());
