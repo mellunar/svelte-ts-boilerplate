@@ -11,6 +11,8 @@ class HttpClient {
         return Promise.reject(error.response);
       }
     );
+
+    console.log(Date.now());
   }
 
   delete<T>(url: string, body?: any, headers?: any) {
@@ -43,5 +45,7 @@ class HttpClient {
     });
   }
 }
+
+Object.freeze(HttpClient);
 
 export const http = new HttpClient();
