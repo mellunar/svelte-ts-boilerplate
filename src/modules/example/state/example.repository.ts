@@ -1,6 +1,5 @@
 import { createStore } from '@ngneat/elf';
 import { selectAllEntities, upsertEntities, withEntities } from '@ngneat/elf-entities';
-import { localStorageStrategy, persistState } from '@ngneat/elf-persist-state';
 import type { User } from './example.interface';
 
 const store = createStore({ name: 'example' }, withEntities<User>());
@@ -13,4 +12,14 @@ class ExampleRepository {
   }
 }
 
-export const exampleRepository = new ExampleRepository();
+let instance;
+
+function getInstance() {
+  if (!instance) {
+    instance = new ExampleRepository();
+  }
+
+  return instance;
+}
+
+export const exampleRepository = getInstance();

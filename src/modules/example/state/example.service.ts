@@ -15,4 +15,14 @@ class ExampleService {
   }
 }
 
-export const exampleService = new ExampleService();
+let instance;
+
+function getInstance() {
+  if (!instance) {
+    instance = new ExampleService();
+  }
+
+  return instance;
+}
+
+export const exampleService = getInstance();

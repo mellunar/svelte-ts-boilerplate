@@ -18,9 +18,6 @@
     exampleService
       .getUsers()
       .pipe(
-        catchError((err) => {
-          throw err;
-        }),
         finalize(() => {
           loading = false;
         })

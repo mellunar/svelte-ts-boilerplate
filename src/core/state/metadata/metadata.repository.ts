@@ -26,4 +26,14 @@ class MetadataRepository {
   }
 }
 
-export const metadataRepository = new MetadataRepository();
+let instance;
+
+function getInstance() {
+  if (!instance) {
+    instance = new MetadataRepository();
+  }
+
+  return instance;
+}
+
+export const metadataRepository = getInstance();
